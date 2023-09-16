@@ -72,7 +72,7 @@ export default function App() {
   // console.log(apiData);
   // console.log(categories);
   const nextPage = () => {
-    setPage(page + 1);
+    if (page < Math.ceil(supply / 50)) setPage(page + 1);
   };
   const setCategory = (c, supp) => {
     setState("");
